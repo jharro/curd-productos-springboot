@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo empleado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <h3>Vista nuevo empleado</h3>
+    <h2>Nuevo empleado</h2>
+    <form action="#" th:action="@{/guardarEmpleado}" th:object="${empleado}" method="post">
+        <input type="text" th:field="*{nombre}" placeholder="Nombre del empleado" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{apellido}" placeholder="Apellido del empleado" class="form-control mb-4 col-4">
+        <input type="text" th:field="*{email}" placeholder="Email del empleado" class="form-control mb-4 col-4">
+        <button type="submit" class="btn btn-info col-2">Guardar</button>
+    </form>
+
+</div>
+</body>
+</html>
